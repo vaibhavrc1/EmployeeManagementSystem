@@ -1,18 +1,14 @@
-1)Please make sure you are connected to the internet as this program
-requires internet connection for log_in and to load the information.
+1)This project runs database locally in your hardware
 
 2)Open RUN.bat file for execution of program.
 
-3)For Admin Section 
-Username:admin
-Password:vaibhav1
+3)Create new account by clicking sign-up button.
 
-4)For User Section
-Username:vaibhav
-Password:chavan07
+4)After that put loginId and password and click login button.
 
-5)Or you can create new account by clicking sign-up button.
+5)You need to add entry for admin loginId and password in database to access Admin Section
 
-Note:Database used in this program is uploaded on the internet.
-
-     Program might not run in the first try so please try again.
+Note:This project runs database locally in your hardware.
+     Database setup is needed for working of project.
+     Look at ScreenShot folder for database setup.
+     Look at VideoDemo file for working of project.
