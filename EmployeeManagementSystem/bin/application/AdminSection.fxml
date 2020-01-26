@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="805.0" style="-fx-background-color: linear-gradient(to bottom right, #4e2a12, #130f2e, #33123a, #320b0b);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminSection">
+   <top>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="95.0" prefWidth="653.0" style="-fx-border-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbAdmin" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" onMouseEntered="#blink" onMouseExited="#blinkstop" style="-fx-background-color: linear-gradient(to bottom right, #9c480c, #3c1a66, #752375, #5c0f14); -fx-border-color: grey;" text="Logged in as an Admin" textFill="#bfbfbf">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="76.0" prefWidth="261.0" text="EMPLOYEE MANAGEMENT SYSTEM" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+               <textFill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.44761904761904764" startX="0.9476190476190477" startY="1.0">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="#c30d0d" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="61.0" prefWidth="696.0" spacing="15.0">
+               <children>
+                  <Label fx:id="lberror" prefHeight="27.0" prefWidth="193.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="searchby" prefHeight="25.0" prefWidth="165.0" promptText="Search By" style="-fx-border-color: silver;" />
+                  <TextField fx:id="searchtext" prefHeight="25.0" prefWidth="165.0" promptText="Text" style="-fx-background-color: silver; -fx-border-color: white;">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></TextField>
+                  <Button fx:id="searchbtn" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: RED; -fx-border-color: silver;" text="SEARCH" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-border-color: silver;" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tid" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="58.0" text="ID" />
+          <TableColumn fx:id="tfirst" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="84.0" text="First Name" />
+            <TableColumn fx:id="tlast" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="82.0" text="Last Name" />
+            <TableColumn fx:id="tph_no" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="86.0" text="Phone No." />
+            <TableColumn fx:id="temail" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="-1.0" text="Email" />
+            <TableColumn fx:id="tservicetype" prefWidth="118.0" text="Service Type" />
+            <TableColumn fx:id="tbloodgrp" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="79.0" text="Blood Group" />
+            <TableColumn fx:id="tgender" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="51.0" text="Gender" />
+            <TableColumn fx:id="tdob" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="Date of Birth" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" spacing="25.0" style="-fx-border-color: silver;" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#UserSection" prefHeight="55.0" prefWidth="127.0" style="-fx-background-color: red; -fx-border-color: grey;" text="ADD ID" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#RemoveID" prefHeight="55.0" prefWidth="127.0" style="-fx-background-color: red; -fx-border-color: grey;" text="REMOVE ID" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#reload" prefHeight="55.0" prefWidth="127.0" style="-fx-background-color: red; -fx-border-color: grey;" text="RELOAD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sign_out" prefHeight="55.0" prefWidth="127.0" style="-fx-background-color: red; -fx-border-color: grey;" text="SIGN OUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
